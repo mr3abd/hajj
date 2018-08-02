@@ -1,0 +1,58 @@
+<!-- <p id="notice"><%= notice %></p>
+
+<h1>Handbooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Icon url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @handbooks.each do |handbook| %>
+      <tr>
+        <td><%= handbook.title %></td>
+        <td><%= handbook.description %></td>
+        <td><%= handbook.icon_url %></td>
+        <td><%= link_to 'Show', handbook %></td>
+        <td><%= link_to 'Edit', edit_handbook_path(handbook) %></td>
+        <td><%= link_to 'Destroy', handbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Handbook', new_handbook_path %>
+
+ -->
+
+<!-- start our section -->
+<section class="follow">
+    <div class="container">
+      <p id="notice"><%= notice %></p>
+
+      <h1>Hand Book</h1>
+
+      <% @handbooks.each do |handbook| %>
+        <div class="main-law">
+            <h1>  <%= handbook.title %></h1>
+            <p><%= handbook.description %></p>
+
+
+            <%= link_to 'See More', handbook , class: 'btn btn-danger' %>
+        </div>
+        <% end %>
+
+    </div>
+
+</section>
+
+
+
+<!-- end our section -->

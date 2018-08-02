@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pin Worships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th>Img url</th>
+      <th>Info text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pin_worships.each do |pin_worship| %>
+      <tr>
+        <td><%= pin_worship.title %></td>
+        <td><%= pin_worship.lat %></td>
+        <td><%= pin_worship.lng %></td>
+        <td><%= pin_worship.img_url %></td>
+        <td><%= pin_worship.info_text %></td>
+        <td><%= link_to 'Show', pin_worship %></td>
+        <td><%= link_to 'Edit', edit_pin_worship_path(pin_worship) %></td>
+        <td><%= link_to 'Destroy', pin_worship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pin Worship', new_pin_worship_path %>

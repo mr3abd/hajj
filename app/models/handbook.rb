@@ -1,0 +1,2 @@
+class Handbook < ApplicationRecord
+end

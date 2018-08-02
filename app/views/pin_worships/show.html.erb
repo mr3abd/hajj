@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pin_worship.title %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @pin_worship.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @pin_worship.lng %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @pin_worship.img_url %>
+</p>
+
+<p>
+  <strong>Info text:</strong>
+  <%= @pin_worship.info_text %>
+</p>
+
+<%= @pin_worship.spots(-33.8670522, 151.1957362, :detail => true) %>
+
+<%= link_to 'Edit', edit_pin_worship_path(@pin_worship) %> |
+<%= link_to 'Back', pin_worships_path %>

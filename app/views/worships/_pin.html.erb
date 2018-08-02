@@ -1,0 +1,47 @@
+<%= form_for([@worship, @worship.pin_worship.build], :method => puts, remote: true) do |f| %>
+    <%= f.text_area :title, label: "Reply to thread" %>
+    <%= f.button :submit, class: "button" %>
+<% end %>
+
+<%= form_with([@worship, @worship.pin_worship.build], :method => puts, remote: true) do |form| %>
+    <% if pin_worship.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(pin_worship.errors.count, "error") %> prohibited this pin_worship from being saved:</h2>
+
+          <ul>
+            <% pin_worship.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :pin_worship_title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :lat %>
+      <%= form.text_field :lat, id: :pin_worship_lat %>
+    </div>
+
+    <div class="field">
+      <%= form.label :lng %>
+      <%= form.text_field :lng, id: :pin_worship_lng %>
+    </div>
+
+    <div class="field">
+      <%= form.label :img_url %>
+      <%= form.text_field :img_url, id: :pin_worship_img_url %>
+    </div>
+
+    <div class="field">
+      <%= form.label :info_text %>
+      <%= form.text_field :info_text, id: :pin_worship_info_text %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>

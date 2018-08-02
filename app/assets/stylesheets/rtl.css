@@ -1,0 +1,14 @@
+
+body{
+  direction: rtl;
+}
+
+@media (min-width: 768px) {
+  /* line 31, /usr/local/rvm/gems/ruby-2.4.1/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
+  .navbar-header {
+    float: right;
+  }
+  .navbar-nav {
+  float: right;
+}
+}

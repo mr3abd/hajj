@@ -1,0 +1,32 @@
+<%= form_with(model: handbook, local: true) do |form| %>
+  <% if handbook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(handbook.errors.count, "error") %> prohibited this handbook from being saved:</h2>
+
+      <ul>
+      <% handbook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :handbook_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :handbook_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon_url %>
+    <%= form.text_field :icon_url, id: :handbook_icon_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

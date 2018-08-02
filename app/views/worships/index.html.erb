@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Worships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Days</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @worships.each do |worship| %>
+      <tr>
+        <td><%= worship.days %></td>
+        <td><%= link_to 'Show', worship %></td>
+        <td><%= link_to 'Edit', edit_worship_path(worship) %></td>
+        <td><%= link_to 'Destroy', worship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Worship', new_worship_path %>

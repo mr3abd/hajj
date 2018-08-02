@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @handbook.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @handbook.description %>
+</p>
+
+<p>
+  <strong>Icon url:</strong>
+  <%= @handbook.icon_url %>
+</p>
+
+<%= link_to 'Edit', edit_handbook_path(@handbook) %> |
+<%= link_to 'Back', handbooks_path %>

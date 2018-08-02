@@ -1,0 +1,98 @@
+<h1>الخريطة</h1>
+اليوم
+<%= DateTime.now.to_date %>
+
+
+سوف تبدء الحج بعد
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("August 31, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+
+<script type="text/javascript">
+   var map;
+   $(document).ready(function(){
+     map = new GMaps({
+       // User Location First
+       el: '#map',
+       lat: 21.422438,
+       lng: 39.826310
+     });
+     map.addMarker({
+       lat: 21.422438,
+       lng: 39.826310,
+       icon: 'https://msayef.net/cl-elmanar/wp-content/themes/elmanareg-child-theme/images/map-pin-com.png',
+       title: 'الكعبة بداية الحج',
+       details: {
+         database_id: 42,
+         author: 'HPNeo'
+       },
+
+       infoWindow: {
+  content: '<p> هنا بداية رحلة الحج سوف تقوم بالخطوات الأتية</p>'
+}
+
+ });
+
+map.addMarker({
+  lat: 21.421299,
+  lng: 39.827747,
+  icon: 'https://msayef.net/cl-elmanar/wp-content/themes/elmanareg-child-theme/images/map-pin-com.png',
+  title: 'الكعبة بداية الحج',
+
+  infoWindow: {
+content: '<a href="/worships/2" <p> هنا بداية رحلة الحج سوف تقوم بالخطوات الأتية</p>'
+}
+     });
+
+     // New Markaer
+  //    map.addMarker({
+  //      lat: -12.042,
+  //      lng: -77.028333,
+  //      icon: 'https://msayef.net/cl-elmanar/wp-content/themes/elmanareg-child-theme/images/map-pin-com.png',
+  //      title: 'Marker with InfoWindow',
+  //      infoWindow: {
+  //        content: '<p>HTML Content</p>'
+  //      }
+  //    });
+  });
+
+</script>
+
+
+<div class="row">
+    <div class="span11">
+      <div id="map"></div>
+    </div>
+  </div>
