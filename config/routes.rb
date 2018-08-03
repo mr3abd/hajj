@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
 
 
+  resources :pinpin_pin_worshops
+  resources :pinpin_pin_worshopsses
+  resources :notes
 resources :user
   resources :handbooks
   resources :worships do

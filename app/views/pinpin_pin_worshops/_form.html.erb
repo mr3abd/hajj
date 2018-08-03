@@ -1,0 +1,22 @@
+<%= form_with(model: pinpin_pin_worshop, local: true) do |form| %>
+  <% if pinpin_pin_worshop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pinpin_pin_worshop.errors.count, "error") %> prohibited this pinpin_pin_worshop from being saved:</h2>
+
+      <ul>
+      <% pinpin_pin_worshop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text, id: :pinpin_pin_worshop_text %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pinpin Pin Worshopsses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pinpin_pin_worshopsses.each do |pinpin_pin_worshopss| %>
+      <tr>
+        <td><%= pinpin_pin_worshopss.text %></td>
+        <td><%= link_to 'Show', pinpin_pin_worshopss %></td>
+        <td><%= link_to 'Edit', edit_pinpin_pin_worshopss_path(pinpin_pin_worshopss) %></td>
+        <td><%= link_to 'Destroy', pinpin_pin_worshopss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pinpin Pin Worshopss', new_pinpin_pin_worshopss_path %>

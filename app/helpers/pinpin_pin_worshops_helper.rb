@@ -1,0 +1,2 @@
+module PinpinPinWorshopsHelper
+end

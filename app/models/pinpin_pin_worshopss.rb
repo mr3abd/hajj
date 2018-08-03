@@ -1,0 +1,2 @@
+class PinpinPinWorshopss < ApplicationRecord
+end

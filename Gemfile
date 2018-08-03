@@ -42,6 +42,9 @@ gem 'figaro'
 gem 'devise'
 gem 'gmaps-rails'
 gem 'google_places'
+gem "paperclip", "~> 6.0.0"
+gem 'ratyrate'
+gem "font-awesome-rails"
 
 
 
